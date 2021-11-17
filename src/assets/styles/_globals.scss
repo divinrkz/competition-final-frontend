@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+$colors: (
+    white: #FFFFFF,
+    dark-teal: #023a51,
+    light-primary: #c0dfed,
+    primary: #2199ca,
+    turquoise-blue: #00bcd4,
+    black : rgba(0, 0, 0, 0.1),
+    pure-black: #000000,
+    success: #34b53a,
+    danger: #ff3a29,
+    info: #02a0fc
+);
+
+$primary_font: 'Nunito', sans-serif;
+
+@function color($color){
+    @return map-get($colors, $color);
+}
