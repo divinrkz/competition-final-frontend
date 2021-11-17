@@ -17,7 +17,13 @@ import { AppComponent } from './app.component';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    // {
+    //   provide: HTTP_INTERCEPTORS,
+    //   useClass: TokenInterceptorService,
+    //   multi: true,
+    // },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
