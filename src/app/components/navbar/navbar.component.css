@@ -31,11 +31,19 @@
     margin: 0 7px;
 }
 
-.right img, .right svg {
+.right img {
     border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+
+}
+
+.right img, .right svg {
     width: 18px;
     height: 18px;
     vertical-align: middle;
+    cursor: pointer;
     fill: white;
 }
 .right p {
