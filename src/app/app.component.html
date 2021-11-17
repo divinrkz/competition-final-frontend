@@ -607,3 +607,71 @@
       <span aria-hidden="true">&times;</span>
   </button>
 </div> -->
+
+
+
+<!-- <div class="modal fade" id="fixedDurationAdvertModal" tabindex="-1" role="dialog"
+  
+aria-labelledby="fixedDurationAdvertModalContentTitle" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <app-alert *ngIf="alertUser" [alertClass]='alertClass' [message]='alertMessage'>
+        </app-alert>
+        <div class="modal-header">
+            <h5 class="modal-title" id="fixedDurationAdvertModalLongTitle">
+                {{'MANAGEMENT.ADVERT-CREATION.steps.step2.content.row2.item1.modal.title' | translate}}
+            </h5>
+        </div>
+        <div class="modal-body">
+            <form class="box-body form-section" (ngSubmit)="manageAdvert()" [formGroup]="fixedDurationForm">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="floating-label-group">
+                            <input type="text" class="form-control" autocomplete="off"
+                                [ngClass]="{'is-invalid': fixedDurationForm.get('adDuration').invalid && fixedDurationForm.get('adDuration').dirty, 'is-valid': fixedDurationForm.get('adDuration').valid   && fixedDurationForm.get('adDuration').dirty}"
+                                formControlName="adDuration" required />
+                            <label class="floating-label">
+                                {{'MANAGEMENT.ADVERT-CREATION.steps.step2.content.row2.item1.modal.inputs.input1' | translate}}</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="floating-label-group">
+                            <input type="text" class="form-control" autocomplete="off"
+                                [ngClass]="{'is-invalid': fixedDurationForm.get('dailyFrequency').invalid && fixedDurationForm.get('dailyFrequency').dirty, 'is-valid': fixedDurationForm.get('dailyFrequency').valid   && fixedDurationForm.get('dailyFrequency').dirty}"
+                                formControlName="dailyFrequency" required />
+                            <label
+                                class="floating-label">{{'MANAGEMENT.ADVERT-CREATION.steps.step2.content.row2.item1.modal.inputs.input2' | translate}}</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="floating-label-group">
+                            <input type="text" class="form-control" autocomplete="off"
+                                [ngClass]="{'is-invalid': fixedDurationForm.get('runTimedays').invalid && fixedDurationForm.get('runTimedays').dirty, 'is-valid': fixedDurationForm.get('runTimedays').valid   && fixedDurationForm.get('runTimedays').dirty}"
+                                formControlName="runTimedays" required />
+                            <label
+                                class="floating-label">{{'MANAGEMENT.ADVERT-CREATION.steps.step2.content.row2.item1.modal.inputs.input3' | translate}}</label>
+                        </div>
+                    </div>
+                </div>
+                <button class="col-12 edit-btn btn btn-success mt-5" id="save-fixed-duration-advert"
+                    type="submit" [disabled]="fixedDurationForm.invalid || isSaving">
+                    <img style="width: 17px; margin-top: -4px;" *ngIf="isSaving"
+                        src="assets/images/loader.gif" />
+                    {{'MANAGEMENT.ADVERT-CREATION.steps.step2.content.row2.item1.modal.inputs.save' | translate}}
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+</div> -->
+
+
+<!-- 
+<span *ngIf="fixedDuration.selected" class="selected" data-toggle="modal"
+(click)="selectTariff(i)" data-target="#fixedDurationAdvertModal">
+<i data-feather="check-circle"></i>
+</span> -->

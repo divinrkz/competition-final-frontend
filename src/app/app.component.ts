@@ -94,4 +94,39 @@ export class AppComponent {
 //   }
 // }
 
+
+
+
+// handleFileInput(files: FileList) {
+//   this.fileToUpload = files.item(0);
+// }
+// uploadBankPaymentInvoice() {
+//   const fileData = new FormData();
+//   const headers = new HttpHeaders();
+//   headers.append('Content-Type', 'multipart/form-data');
+//   headers.append('Accept', 'application/json');
+//   fileData.append('receiptFile', this.fileToUpload);
+//   this.paymentsService.uploadReceipt(this.transactionId, this.receiptNumber.value, fileData, headers).subscribe((content: any) => {
+//     this.alertMessage = content.message;
+//     this.alertClass = 'alert-success-lighten';
+//     this.alertUser = true;
+//     this.transactionSuccess = true;
+//     this.paymentSuccess = true;
+//     setTimeout(() => {
+//       Feather.replace();
+//     }, 100);
+//     this.getAdvertInfo(this.cardPaymentForm.get('advertInfo').value);
+//   }, (err: HttpErrorResponse) => {
+//     this.alertUser = true;
+//     this.transactionSuccess = true;
+//     if (err.status === 500) {
+//       this.alertMessage = 'alert-responses.error-500';
+//     } else {
+//       this.alertMessage = err.error.apierror.message;
+//     }
+//     this.alertClass = 'alert-danger-lighten';
+//   });
+
+// }
+
 }
