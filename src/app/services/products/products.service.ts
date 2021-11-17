@@ -25,8 +25,8 @@ export class ProductsService {
   }
 
   
-  updateStatus(id: string, access: string) {
-    return this.httpClient.put(environment.API_URL + `/products/${id}/access/${access}`, {});
+  updateStatus(id: string, status: string) {
+    return this.httpClient.put(environment.API_URL + `/products/${id}/status/${status}`, {});
   }
 
   delete(id: string) {

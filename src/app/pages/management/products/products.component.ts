@@ -41,7 +41,12 @@ export class ProductsComponent implements OnInit {
   getAllProducts () {
     this.productService.getAllProducts().subscribe((res: any) => {
       console.log(res);
-      this.products = res?.data;
+      this.products = [];
+      for (const product of res?.data) {
+        product.exportDate = new Date(product.exportationDate).toDateString();
+        product.expireDate = new Date(product.expirationDate).toDateString();
+        this.products.push(product);
+      }
     } )
   }
   createProduct() {
@@ -56,13 +61,13 @@ export class ProductsComponent implements OnInit {
   getProduct(id: string) {
     console.log(id);
     this.product = this.products.find((i) => i._id === id);
-    this.product.action = (this.product.access === 'PENDING' ? 'grant': 
-                            this.product.access === 'GRANTED' ? 'Deny': 
-                            this.product.access === 'DENIED' ? 'Grant': '');
+    this.product.action = (this.product.status === 'APPROVED_FOR_EXPORTATION' ? 'Reject for exportation': 
+                            this.product.status === 'REJECTED_FOR_EXPORTATION' ? 'Approve for exportation': 
+                            this.product.status === 'PENDING' ? 'Approve for exportation': '');
 
-    this.product.API = (this.product.access === 'PENDING' ? 'GRANTED': 
-    this.product.access === 'GRANTED' ? 'DENIED': 
-    this.product.access === 'DENIED' ? 'GRANTED': '');
+    this.product.API = (this.product.status === 'PENDING' ? 'APPROVED_FOR_EXPORTATION': 
+    this.product.access === 'APPROVED_FOR_EXPORTATION' ? 'REJECTED_FOR_EXPORTATION': 
+    this.product.access === 'REJECTED_FOR_EXPORTATION' ? 'APPROVED_FOR_EXPORTATION': '');
     console.log(this.product);
 
   }

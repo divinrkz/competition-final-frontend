@@ -33,13 +33,13 @@
                     <td>{{product?.owner}}</td>
                     <td>{{product?.category}}</td>
                     <td>{{product?.quantity}}</td>
-                    <td>{{product?.exportationDate}}</td>
-                    <td>{{product?.expirationDate}}</td>
+                    <td>{{product?.exportDate}}</td>
+                    <td>{{product?.expireDate}}</td>
                     <td>{{product?.status}}</td>
                     <td>
-                        <span data-toggle="modal" data-target="#deleteProductModal" (click)="getProduct(product._id)">
+                        <span data-toggle="modal" data-target="#accessProductModal" (click)="getProduct(product._id)">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-.997-4L6.76 11.757l1.414-1.414 2.829 2.829 5.656-5.657 1.415 1.414L11.003 16z"/></svg></span>
-                        <span data-toggle="modal" data-target="#updateProductModal">
+                        <span data-toggle="modal" data-target="#updateProductModal" >
                             <span>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12.684 4.029a8 8 0 1 0 7.287 7.287 7.936 7.936 0 0 0-.603-2.44l1.5-1.502A9.933 9.933 0 0 1 22 12c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2a9.982 9.982 0 0 1 4.626 1.132l-1.501 1.5a7.941 7.941 0 0 0-2.44-.603zM20.485 2.1L21.9 3.515l-9.192 9.192-1.412.003-.002-1.417L20.485 2.1z"/></svg>
                             </span>
@@ -267,7 +267,7 @@ aria-labelledby="accessProductModalContentTitle" aria-hidden="true">
             </h5>
         </div>
         <div class="modal-body">
-            <p>Do you mark {{product?.name}} as {{product?.action}}</p>
+            <p>Do you mark {{product?.name}} {{product?.action}}</p>
                 <button class="col-12 edit-btn btn btn-primary mt-3" id="save-fixed-duration-advert"
                     type="button" (click)="updateStatus(product._id)">
                     <img style="width: 17px; margin-top: -4px;" *ngIf="isLoading"

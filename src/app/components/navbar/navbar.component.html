@@ -15,7 +15,7 @@
     </div>
 
 
-    <div class=" mt-5 tabs d-flex border">
+    <div class=" mt-5 tabs d-flex border" *ngIf="user.userType === 'ADMIN'">
         <div class="tab col-2 border-right" [routerLink]="['/admin/management/employees']">
             <p class="text-center">Employees</p>
         </div>
