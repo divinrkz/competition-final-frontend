@@ -1,0 +1,38 @@
+<div class="container-fluid">
+  <div class="content">
+      <div class="box col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+          <!-- <app-alert *ngIf="alertUserLogin" [alertClass]='alertClass' [message]='alertMessage'>
+          </app-alert> -->
+          <div class="box-header">
+              <h4>Login</h4>
+
+          </div>
+          <form class="box-body form-section" [formGroup]="loginForm" (ngSubmit)="login()">
+              <div class="row">
+                  <div class="col-12">
+                      <div class="floating-label-group">
+                          <input type="text" id="username" class="form-control" autocomplete="off"
+                              formControlName="username" required />
+                          <label class="floating-label">Username</label>
+                      </div>
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-12">
+                      <div class="floating-label-group">
+                          <input type="password" id="password" class="form-control" autocomplete="off"
+                              formControlName="password" required />
+                          <label class="floating-label">Password</label>
+                      </div>
+                  </div>
+              </div>
+              <button class="col-12 register-btn btn btn-primary" type="submit"
+                  [disabled]="loginForm.invalid || isLoading">
+                  <img style="width: 17px; margin-top: -4px;" *ngIf="isLoading" src="assets/images/loader.gif" />
+                  Login
+              </button>
+          </form>
+      </div>
+  </div>
+</div> 
+

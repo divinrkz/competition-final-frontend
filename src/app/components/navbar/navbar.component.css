@@ -1,0 +1,52 @@
+.container-fluid {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar {
+    padding: 1rem 0;
+    margin : 0;
+}
+
+.bg-dark {
+    background-color: #743C;
+}
+
+.left {
+    margin-left: 2.5rem;
+}
+
+.tabs {
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+}
+
+.right {
+    display: flex;
+    margin-right: 3rem;
+    /* margin-top: ; */
+}
+
+.right img {
+    margin: 0 7px;
+}
+
+.right img, .right svg {
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    fill: white;
+}
+.right p {
+    margin-bottom: 0;
+}
+.tab {
+    cursor: pointer;
+}
+
+.tabs p {
+    margin-bottom: 0;
+    padding: 8px 0; 
+    /* padding-top: 8px; */
+}

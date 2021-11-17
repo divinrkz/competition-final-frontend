@@ -1,0 +1,94 @@
+<app-navbar></app-navbar>
+
+
+<div class="container-fluid mt-3 mb-5">
+    <div class="row">
+    <div class="col-2 ml-auto">
+        <button class="btn btn-primary" data-toggle="modal" data-target="#createEmployeeModal">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"/></svg>
+            Create Employee
+        </button>
+        
+    </div>
+    </div>
+    <div class="table-container mt-4 ml-5 mr-5">
+        <table class="table ml-1 mr-1">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Names</th>
+                    <th>Username</th>
+                    <th>NationalId</th>
+                    <th>Access</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#</td>
+                    <td>Names</td>
+                    <td>Username</td>
+                    <td>NationalId</td>
+                    <td>Access</td>
+                    <td>Status</td>
+                    <td>
+                        <!-- <span>Update</span> -->
+                        <span mwlConfirmationPopover
+                            popoverTitle="'Delelte this'"
+                            popoverMessage="'Delete agina'" placement="left"
+                            (confirm)="deleteEmployee()"
+                            (cancel)="cancelClicked = true">
+            
+                        </span>
+                        <span>Delete</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+ <div class="modal fade" id="createEmployeeModal" tabindex="-1" role="dialog"
+  
+aria-labelledby="createEmployeeModalContentTitle" aria-hidden="true">
+<div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+        <!-- <app-alert *ngIf="alertUser" [alertClass]='alertClass' [message]='alertMessage'>
+        </app-alert> -->
+        <div class="modal-header">
+            <h5 class="modal-title" id="createEmployeeModalLongTitle">
+                Create Employee
+            </h5>
+        </div>
+        <div class="modal-body">
+            <form class="box-body form-section" (ngSubmit)="createEmployee()" [formGroup]="employeeForm">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- [ngClass]="{'is-invalid': employeeForm.get('name').invalid && employeeForm.get('name').dirty, 'is-valid': employeeForm.get('name').valid   && employeeForm.get('name').dirty}" -->
+                        <div class="floating-label-group">
+                            <input type="text" class="form-control" autocomplete="off"
+                             
+                                formControlName="name" required />
+                            <label class="floating-label">
+                               Names</label>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="col-12 edit-btn btn btn-success mt-5" id="save-fixed-duration-advert"
+                    type="submit" [disabled]="employeeForm.invalid || isLoading">
+                    <img style="width: 17px; margin-top: -4px;" *ngIf="isLoading"
+                        src="assets/images/loader.gif" />
+                    Save item
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+</div> 

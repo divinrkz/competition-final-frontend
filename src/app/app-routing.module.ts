@@ -1,19 +1,24 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
+import { LoginComponent } from './pages/login/login.component';
+import { EmployeesComponent } from './pages/management/employees/employees.component';
+import { ProductsComponent } from './pages/management/products/products.component';
 
 
 const routes: Routes = [
 
-//   {
-//     path: 'traffic-controller/advert/invoice',
-//     canActivate: [TrafficControllerGuard, AuthGuard],
-//     component: AdvertInvoiceComponent,
-//   },
-
-//   {
-//     path: 'reset-password',
-//     component: ResetPasswordComponent,
-//   },
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
+    path: 'admin/management/employees',
+    component: EmployeesComponent,
+  },
+  {
+    path: 'shared/management/products',
+    component: ProductsComponent,
+  }
 //   {
 //     path: '**',
 //     pathMatch: 'full',

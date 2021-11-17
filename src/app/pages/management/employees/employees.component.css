@@ -1,0 +1,29 @@
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+.btn-primary {
+    background-color: #000;
+    border-radius: 5px;
+    padding: 8px 16px;
+    color: white;
+    font-size: 14px;
+    border-color: #000;
+}
+
+.btn svg {
+    fill: white;
+    width: 18px;
+    height: 18px;
+    vertical-align: sub;
+
+}
+
+.table {
+    width: 100%;    
+}
+
+
+
+
